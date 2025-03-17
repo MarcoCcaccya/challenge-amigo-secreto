@@ -31,3 +31,21 @@ function actualizarLista() {
 
     // **Commit 2**: Funcionalidad de actualizar la lista de amigos implementada.
 }
+// 4. Función para sortear un amigo secreto de forma aleatoria
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("No hay amigos en la lista para sortear.");
+        return; // Si no hay amigos en la lista, no hacemos el sorteo
+    }
+
+    // Seleccionar un índice aleatorio en el array
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSorteado = amigos[indiceAleatorio];
+
+    // Mostrar el nombre del amigo sorteado en la sección de resultado
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = `<li><strong>¡El amigo secreto es: ${amigoSorteado}!</strong></li>`;
+
+    // **Commit 3**: Funcionalidad de sortear un amigo secreto implementada.
+}
+
