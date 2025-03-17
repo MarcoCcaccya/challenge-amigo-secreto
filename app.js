@@ -18,4 +18,16 @@ function agregarAmigo() {
 
     // **Commit 1**: Funcionalidad de agregar amigos implementada.
 }
+// 3. Función para actualizar la lista de amigos visualmente
+function actualizarLista() {
+    const listaAmigos = document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = ""; // Limpiar la lista actual
 
+    amigos.forEach(amigo => {
+        const li = document.createElement('li');
+        li.textContent = amigo;
+        listaAmigos.appendChild(li); // Agregar cada amigo como elemento <li> en la lista
+    });
+
+    // **Commit 2**: Funcionalidad de actualizar la lista de amigos implementada.
+}
